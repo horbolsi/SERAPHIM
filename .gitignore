@@ -1,17 +1,21 @@
-# Ignore environment files
-.env
-
 # Node modules
-node_modules/
+/node_modules/
+
+# Build outputs
+/artifacts/
+/cache/
+
+# Environment variables
+.env
 
 # Logs
 *.log
 
+# IDE configurations
+/.vscode/
+/.idea/
+
 # OS-specific files
 .DS_Store
 Thumbs.db
-
-# Compiled files
-dist/
-build/
 

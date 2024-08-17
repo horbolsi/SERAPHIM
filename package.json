@@ -1,0 +1,29 @@
+{
+  "name": "my-contracts",
+  "version": "1.0.0",
+  "description": "Deployment scripts and contracts for my project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "deploy:liquidityToken": "npx hardhat run scripts/deployLiquidityToken.js --network rinkeby",
+    "deploy:governance": "npx hardhat run scripts/deployGovernance.js --network rinkeby",
+    "deploy:seraphimToken": "npx hardhat run scripts/deploySeraphimToken.js --network rinkeby"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^4.8.0",
+    "@openzeppelin/hardhat-upgrades": "^2.5.1",
+    "dotenv": "^16.0.3",
+    "ethers": "^6.1.0",
+    "hardhat": "^2.18.0",
+    "hardhat-deploy": "^0.11.13"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.6",
+    "eslint": "^8.44.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5"
+  },
+  "author": "",
+  "license": "MIT"
+}
+
