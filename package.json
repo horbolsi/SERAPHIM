@@ -1,29 +1,49 @@
 {
-  "name": "my-contracts",
+  "name": "seraphim-token",
   "version": "1.0.0",
-  "description": "Deployment scripts and contracts for my project",
+  "description": "Smart contract project for Seraphim token and mock NFT",
   "main": "index.js",
   "scripts": {
     "test": "npx hardhat test",
-    "deploy:liquidityToken": "npx hardhat run scripts/deployLiquidityToken.js --network rinkeby",
-    "deploy:governance": "npx hardhat run scripts/deployGovernance.js --network rinkeby",
-    "deploy:seraphimToken": "npx hardhat run scripts/deploySeraphimToken.js --network rinkeby"
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.js",
+    "verify": "npx hardhat verify"
   },
   "dependencies": {
+    "@chainlink/contracts": "^1.2.0",
+    "@ethereum-waffle/mock-contract": "^4.0.4",
+    "@ethereum-waffle/provider": "^4.0.5",
     "@openzeppelin/contracts-upgradeable": "^4.8.0",
-    "@openzeppelin/hardhat-upgrades": "^2.5.1",
-    "dotenv": "^16.0.3",
-    "ethers": "^6.1.0",
-    "hardhat": "^2.18.0",
-    "hardhat-deploy": "^0.11.13"
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "lodash": "^4.17.21",
+    "solidity-coverage": "^0.8.12"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-ethers": "^3.0.6",
-    "eslint": "^8.44.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
+    "@ethereum-waffle/chai": "^4.0.10",
+    "@nomicfoundation/hardhat-ethers": "^3.0.7",
+    "@nomicfoundation/hardhat-ignition": "^0.15.5",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.5",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.11",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.9",
+    "@nomicfoundation/ignition-core": "^0.15.5",
+    "@openzeppelin/hardhat-upgrades": "^3.2.1",
+    "@openzeppelin/test-helpers": "^0.5.16",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@types/mocha": "^10.0.7",
+    "chai": "^4.5.0",
+    "hardhat": "^2.22.9",
+    "hardhat-deploy": "^0.11.45",
+    "hardhat-gas-reporter": "^1.0.10",
+    "mocha": "^9.2.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "resolutions": {
+    "glob": "^9.0.0",
+    "uuid": "^7.0.0"
   },
   "author": "",
   "license": "MIT"
 }
-
